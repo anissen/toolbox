@@ -8,17 +8,23 @@ class Test {
     }
 
     static function test_json_compile_time_import() {
+        trace('***** test_json_compile_time_import *****');
         trace(JSONImporter.import_json('test.json'));
+        trace('');
     }
 
     static function test_json_compile_time_strongly_typed_import() {
+        trace('***** test_json_compile_time_strongly_typed_import *****');
         trace(R);
+        trace('');
     }
 
     static function test_map_iterator() {
+        trace('***** test_map_iterator *****');
         var map = [ 42 => 'hello', 666 => 'world' ];
         for (pair in KeyValueIterator.pairs(map) /* or using KeyValueIterator */) {
             trace('key: ${pair.key}, value: ${pair.value}');
         }
+        trace('');
     }
 }
